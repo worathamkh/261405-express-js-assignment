@@ -1,0 +1,82 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Add Customer
+
+        // register form
+        form(method='POST' action='/api/user')
+          div.form-group
+            label(for='id') Id:
+            input#id.form-control(type='text', placeholder='Your ID' name='id')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='Your name' name='name')
+          div.form-group
+            label(for='username') Username:
+            input#username.form-control(type='text', placeholder='username' name='username')
+          div.form-group
+            label(for='age') Age:
+            input#age.form-control(type='number', placeholder='age' name='age')
+          div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+          div.form-group
+            label(for='address_street') Address Street:
+            input#address_street.form-control(type='text', placeholder='Street' name='address.street')
+          div.form-group
+            label(for='address_suite') Address Suite:
+            input#address_suite.form-control(type='text', placeholder='Suite' name='address.suite')
+          div.form-group
+            label(for='address_city') Address City:
+            input#address_city.form-control(type='text', placeholder='City' name='address.city')
+          div.form-group
+            label(for='address_zipcode') Address Zipcode:
+            input#address_zipcode.form-control(type='text', placeholder='Zipcode' name='address.zipcode')
+          div.form-group
+            label(for='address_geo_lat') Address Geo Lat:
+            input#address_geo_lat.form-control(type='text', placeholder='Latitude' name='address.geo.lat')
+          div.form-group
+            label(for='address_geo_lng') Address Geo Lng:
+            input#address_geo_lng.form-control(type='text', placeholder='Longitude' name='address.geo.lng')
+          div.form-group
+            label(for='phone') Phone:
+            input#phone.form-control(type='text', placeholder='Phone No.' name='phone')
+          div.form-group
+            label(for='website') Website:
+            input#website.form-control(type='text', placeholder='Your site' name='website')
+          div.form-group
+            label(for='company_name') Company Name:
+            input#company_name.form-control(type='text', placeholder='Company Name' name='company.name')
+          div.form-group
+            label(for='company_catchphrase') Company Catchphrase:
+            input#company_catchphrase.form-control(type='text', placeholder='Company Catchphrase' name='company.catchPhrase')
+          div.form-group
+            label(for='company_bs') Company Bs:
+            input#company_bs.form-control(type='text', placeholder='Company BS' name='company.bs')
+          div.form-group
+            label(for='token') Token:
+            input#company_bs.form-control(type='text', placeholder='API Token' name='token')
+          button.btn.btn-primary(type='submit') Submit
+    .row(style='margin-top: 40px')
+      table.display.table.table-bordered(data-toggle='table', data-url='/api/user')
+        thead
+          tr
+            th(data-field='id') Id
+            th(data-field='name') Name
+            th(data-field='username') Username
+            th(data-field='age') Age
+            th(data-field='email') Email
+            th(data-field='address.street') Address Street
+            th(data-field='address.suite') Address Suite
+            th(data-field='address.city') Address City
+            th(data-field='address.zipcode') Address Zipcode
+            th(data-field='address.geo.lat') Address Geo Lat
+            th(data-field='address.geo.lng') Address Geo Lng
+            th(data-field='phone') Phone
+            th(data-field='website') Website
+            th(data-field='company.name') Company Name
+            th(data-field='company.catchPhrase') Company Catchphrase
+            th(data-field='company.bs') Company s
